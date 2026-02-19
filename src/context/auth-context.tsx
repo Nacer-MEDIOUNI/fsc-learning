@@ -27,7 +27,7 @@ interface AuthContextValue {
 const STORAGE_KEY = 'fsc-auth-token';
 const INIT_KEY = 'fsc-auth-initialized';
 
-const MOCK_JWT = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9';
+const MOCK_JWT = process.env.NEXT_PUBLIC_MOCK_JWT ?? '';
 
 function readAuthState(): boolean {
   const token = localStorage.getItem(STORAGE_KEY);
