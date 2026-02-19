@@ -1,0 +1,33 @@
+{
+  "metadata": {
+    "title": "FSC Panel de Aprendizaje",
+    "description": "Tu viaje de aprendizaje comienza aqui"
+  },
+  "common": {
+    "loading": "Cargando...",
+    "error": "Algo salio mal",
+    "notFound": "Pagina no encontrada"
+  },
+  "home": {
+    "refresh": "Actualizar Pagina"
+  },
+  "auth": {
+    "greeting": "Bienvenido, {name}",
+    "logout": "Cerrar Sesión"
+  },
+  "loggedOut": {
+    "title": "Has cerrado sesión",
+    "message": "Tu sesión ha terminado. Inicia sesión de nuevo para continuar aprendiendo.",
+    "loginBack": "Iniciar Sesión"
+  },
+  "error": {
+    "title": "Algo salió mal",
+    "message": "Ocurrió un error inesperado. Por favor, inténtalo de nuevo.",
+    "retry": "Intentar de Nuevo"
+  },
+  "notFound": {
+    "title": "Página no encontrada",
+    "message": "La página que buscas no existe.",
+    "goHome": "Ir al Panel"
+  }
+}
