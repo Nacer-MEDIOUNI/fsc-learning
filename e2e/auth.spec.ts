@@ -1,7 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-const MOCK_JWT =
-  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c3JfMDAxIiwibmFtZSI6IkFsZXggTW9yZ2FuIiwicm9sZSI6ImxlYXJuZXIifQ.mock-signature';
+const MOCK_JWT = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9';
 
 test.describe('auth flow', () => {
   test.beforeEach(async ({ page }) => {
