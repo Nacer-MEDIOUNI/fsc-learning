@@ -1,0 +1,6 @@
+{
+  "title": "Mes favoris",
+  "description": "Vous avez {count} cours enregistrés",
+  "noCourses": "Aucun cours enregistré",
+  "noCoursesDescription": "Ajoutez des cours du catalogue en favoris pour les retrouver ici."
+}

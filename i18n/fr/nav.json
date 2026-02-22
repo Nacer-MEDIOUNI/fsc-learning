@@ -1,0 +1,13 @@
+{
+  "overview": "Vue d'ensemble",
+  "catalogue": "Catalogue",
+  "goals": "Objectifs",
+  "analytics": "Analytique",
+  "reviews": "Avis",
+  "profile": "Profil",
+  "settings": "Paramètres",
+  "logout": "Se déconnecter",
+  "main": "PRINCIPAL",
+  "analyticsSection": "ANALYTIQUE",
+  "settingsSection": "PARAMÈTRES"
+}

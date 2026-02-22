@@ -2,75 +2,71 @@
 
 import {
   createContext,
-  use,
-  useCallback,
-  useLayoutEffect,
+  useContext,
   useState,
+  useLayoutEffect,
+  useCallback,
+  useMemo,
 } from 'react';
-import { usePathname, useRouter } from '@/i18n/navigation';
-import userData from '../../data/user.json';
+import type { ReactNode } from 'react';
+import { useRouter } from '@/i18n/navigation';
 
-interface User {
-  id: string;
+const STORAGE_KEY = 'fsc-auth-token';
+const MOCK_TOKEN = 'mock-jwt-fsc-learning-2026';
+
+interface AuthUser {
   name: string;
   email: string;
-  role: string;
-  avatarInitials: string;
 }
 
 interface AuthContextValue {
-  user: User | null;
+  user: AuthUser | null;
+  isAuthenticated: boolean;
   logout: () => void;
   loginBack: () => void;
 }
 
-const STORAGE_KEY = 'fsc-auth-token';
-const INIT_KEY = 'fsc-auth-initialized';
+const AuthContext = createContext<AuthContextValue | null>(null);
 
-const MOCK_JWT = process.env.NEXT_PUBLIC_MOCK_JWT ?? '';
-
-function readAuthState(): boolean {
-  const token = localStorage.getItem(STORAGE_KEY);
-  if (token === null && !localStorage.getItem(INIT_KEY)) {
-    localStorage.setItem(STORAGE_KEY, MOCK_JWT);
-    localStorage.setItem(INIT_KEY, 'true');
-    return true;
-  }
-  return token !== null;
-}
-
-export const AuthContext = createContext<AuthContextValue | null>(null);
-
-export function AuthProvider({ children }: { children: React.ReactNode }) {
+export function AuthProvider({ children }: { children: ReactNode }) {
+  const [user, setUser] = useState<AuthUser | null>(null);
   const router = useRouter();
-  const pathname = usePathname();
-  const [isLoggedIn, setIsLoggedIn] = useState<boolean | null>(null);
 
   useLayoutEffect(() => {
-    setIsLoggedIn(readAuthState());
-  }, [pathname]);
+    const token = localStorage.getItem(STORAGE_KEY);
+    if (!token) {
+      localStorage.setItem(STORAGE_KEY, MOCK_TOKEN);
+    }
+    setUser({ name: 'Sarah', email: 'sarah.richter@fsc.org' });
+  }, []);
 
   const logout = useCallback(() => {
     localStorage.removeItem(STORAGE_KEY);
+    setUser(null);
     router.push('/logged-out');
   }, [router]);
 
   const loginBack = useCallback(() => {
-    localStorage.setItem(STORAGE_KEY, MOCK_JWT);
+    localStorage.setItem(STORAGE_KEY, MOCK_TOKEN);
+    setUser({ name: 'Sarah', email: 'sarah.richter@fsc.org' });
     router.push('/');
   }, [router]);
 
-  if (isLoggedIn === null) return null;
-
-  const user = isLoggedIn ? (userData as User) : null;
-
-  return (
-    <AuthContext value={{ user, logout, loginBack }}>{children}</AuthContext>
+  const value = useMemo(
+    () => ({
+      user,
+      isAuthenticated: user !== null,
+      logout,
+      loginBack,
+    }),
+    [user, logout, loginBack],
   );
+
+  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }
 
 export function useAuth(): AuthContextValue {
-  const context = use(AuthContext);
+  const context = useContext(AuthContext);
   if (!context) {
     throw new Error('useAuth must be used within an AuthProvider');
   }

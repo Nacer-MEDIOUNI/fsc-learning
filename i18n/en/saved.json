@@ -1,0 +1,6 @@
+{
+  "title": "My Saved List",
+  "description": "You have {count} saved courses",
+  "noCourses": "No saved courses yet",
+  "noCoursesDescription": "Bookmark courses from the catalog to find them here."
+}

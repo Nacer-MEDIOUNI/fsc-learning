@@ -1,33 +1,46 @@
 {
-  "metadata": {
-    "title": "FSC Panel de Aprendizaje",
-    "description": "Tu viaje de aprendizaje comienza aqui"
-  },
-  "common": {
-    "loading": "Cargando...",
-    "error": "Algo salio mal",
-    "notFound": "Pagina no encontrada"
-  },
-  "home": {
-    "refresh": "Actualizar Pagina"
-  },
-  "auth": {
-    "greeting": "Bienvenido, {name}",
-    "logout": "Cerrar Sesión"
-  },
-  "loggedOut": {
-    "title": "Has cerrado sesión",
-    "message": "Tu sesión ha terminado. Inicia sesión de nuevo para continuar aprendiendo.",
-    "loginBack": "Iniciar Sesión"
-  },
-  "error": {
-    "title": "Algo salió mal",
-    "message": "Ocurrió un error inesperado. Por favor, inténtalo de nuevo.",
-    "retry": "Intentar de Nuevo"
-  },
-  "notFound": {
-    "title": "Página no encontrada",
-    "message": "La página que buscas no existe.",
-    "goHome": "Ir al Panel"
-  }
+  "loading": "Cargando...",
+  "error": "Algo salió mal",
+  "cancel": "Cancelar",
+  "confirm": "Confirmar",
+  "delete": "Eliminar",
+  "save": "Guardar",
+  "viewAll": "Ver todo",
+  "noResults": "No se encontraron resultados",
+  "close": "Cerrar",
+  "back": "Atrás",
+  "next": "Siguiente",
+  "yes": "Sí",
+  "no": "No",
+  "courses": "Cursos",
+  "clearSearch": "Borrar búsqueda",
+  "clearFilters": "Borrar filtros",
+  "remove": "Eliminar",
+  "search": "Buscar",
+  "openMenu": "Abrir menú de navegación",
+  "collapseSidebar": "Contraer barra lateral",
+  "expandSidebar": "Expandir barra lateral",
+  "switchToLight": "Cambiar a modo claro",
+  "switchToDark": "Cambiar a modo oscuro",
+  "toggleTheme": "Alternar modo oscuro",
+  "selectLanguage": "Seleccionar idioma",
+  "privacy": "Privacidad",
+  "terms": "Términos",
+  "helpLabel": "Ayuda",
+  "copyright": "© 2026 Forest Stewardship Council",
+  "notFoundTitle": "Página no encontrada",
+  "notFoundMessage": "La página que buscas no existe.",
+  "goHome": "Ir al panel",
+  "errorTitle": "Algo salió mal",
+  "errorMessage": "Ocurrió un error inesperado.",
+  "retry": "Intentar de nuevo",
+  "loggedOutTitle": "Has cerrado sesión",
+  "loggedOutMessage": "Tu sesión ha finalizado. Inicia sesión de nuevo para continuar aprendiendo.",
+  "loginBack": "Iniciar sesión de nuevo",
+  "siteTitle": "FSC Aprendizaje",
+  "pageTitleDashboard": "Panel",
+  "pageTitleCatalogue": "Catálogo",
+  "pageTitleLoggedOut": "Sesión cerrada",
+  "pageTitleNotFound": "Página no encontrada",
+  "pageTitleError": "Error"
 }

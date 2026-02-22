@@ -1,0 +1,6 @@
+{
+  "title": "Mi lista guardada",
+  "description": "Tienes {count} cursos guardados",
+  "noCourses": "Aún no hay cursos guardados",
+  "noCoursesDescription": "Marca cursos del catálogo como favoritos para encontrarlos aquí."
+}
