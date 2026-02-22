@@ -37,7 +37,7 @@ const mockRecentCourses: Course[] = [
     category: 'Certification',
     module: 'Module 3: Documentation',
     icon: 'Award',
-    thumbnailUrl: '/images/course1.jfif',
+    thumbnailUrl: '/images/course1.jpg',
     progress: 65,
     status: 'in_progress',
     duration: '4h 30m',
