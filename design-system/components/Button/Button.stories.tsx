@@ -1,19 +1,40 @@
 import type { Meta, StoryObj } from '@storybook/nextjs-vite';
-import { Button } from './Button';
+import Button from './Button';
 
-const meta: Meta<typeof Button> = {
-  title: 'Components/Button',
+const meta = {
+  title: 'UI/Button',
   component: Button,
-};
+  argTypes: {
+    variant: {
+      control: 'select',
+      options: ['primary', 'secondary', 'ghost', 'outline'],
+    },
+    size: {
+      control: 'select',
+      options: ['sm', 'md', 'lg'],
+    },
+  },
+} satisfies Meta<typeof Button>;
+
 export default meta;
-type Story = StoryObj<typeof Button>;
+type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
-  args: { variant: 'primary', children: 'Start Course' },
+  args: { children: 'Primary', variant: 'primary' },
 };
+
 export const Secondary: Story = {
-  args: { variant: 'secondary', children: 'View Details' },
+  args: { children: 'Secondary', variant: 'secondary' },
 };
+
+export const Outline: Story = {
+  args: { children: 'Outline', variant: 'outline' },
+};
+
+export const Ghost: Story = {
+  args: { children: 'Ghost', variant: 'ghost' },
+};
+
 export const Disabled: Story = {
-  args: { disabled: true, children: 'Unavailable' },
+  args: { children: 'Disabled', variant: 'primary', disabled: true },
 };

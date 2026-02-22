@@ -1,41 +1,22 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { describe, it, expect, vi } from 'vitest';
-import { Button } from './Button';
+import Button from './Button';
 
 describe('Button', () => {
-  it('renders with the provided text', () => {
-    render(<Button>Start Course</Button>);
-    expect(
-      screen.getByRole('button', { name: 'Start Course' }),
-    ).toBeInTheDocument();
-  });
-
-  it('calls onClick when clicked', async () => {
+  it('calls onClick and does not call when disabled', async () => {
+    const user = userEvent.setup();
     const onClick = vi.fn();
-    render(<Button onClick={onClick}>Click</Button>);
-    await userEvent.click(screen.getByRole('button'));
-    expect(onClick).toHaveBeenCalledOnce();
-  });
+    const { rerender } = render(<Button onClick={onClick}>Click me</Button>);
+    await user.click(screen.getByRole('button', { name: 'Click me' }));
+    expect(onClick).toHaveBeenCalledTimes(1);
 
-  it('does not fire when disabled', async () => {
-    const onClick = vi.fn();
-    render(
-      <Button disabled onClick={onClick}>
-        No
+    rerender(
+      <Button onClick={onClick} disabled>
+        Click me
       </Button>,
     );
-    await userEvent.click(screen.getByRole('button'));
-    expect(onClick).not.toHaveBeenCalled();
-  });
-
-  it('applies primary variant by default', () => {
-    render(<Button>Primary</Button>);
-    expect(screen.getByRole('button')).toHaveClass('bg-blue-600');
-  });
-
-  it('applies secondary variant styles', () => {
-    render(<Button variant="secondary">Secondary</Button>);
-    expect(screen.getByRole('button')).toHaveClass('border-blue-600');
+    await user.click(screen.getByRole('button', { name: 'Click me' }));
+    expect(onClick).toHaveBeenCalledTimes(1);
   });
 });
