@@ -1,0 +1,18 @@
+{
+  "placeholder": "Search courses, topics, or help...",
+  "searchCoursesPages": "Search courses, pages...",
+  "noResults": "No results for \"{query}\"",
+  "recent": "Recent Courses",
+  "navigate": "to navigate",
+  "select": "to select",
+  "closeLabel": "to close",
+  "courses": "Courses",
+  "pages": "Pages",
+  "help": "Help",
+  "tryDifferentTerm": "Try a different search term",
+  "noResultsPrefix": "No results for",
+  "searchAriaLabel": "Search courses, pages, help",
+  "searchResultsLabel": "Search results",
+  "recentCoursesLabel": "Recent courses",
+  "open": "Open"
+}

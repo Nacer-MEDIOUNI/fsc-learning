@@ -1,0 +1,18 @@
+{
+  "placeholder": "Buscar cursos, temas o ayuda...",
+  "searchCoursesPages": "Buscar cursos, páginas...",
+  "noResults": "Sin resultados para «{query}»",
+  "recent": "Cursos recientes",
+  "navigate": "para navegar",
+  "select": "para seleccionar",
+  "closeLabel": "para cerrar",
+  "courses": "Cursos",
+  "pages": "Páginas",
+  "help": "Ayuda",
+  "tryDifferentTerm": "Intenta con otro término de búsqueda",
+  "noResultsPrefix": "Sin resultados para",
+  "searchAriaLabel": "Buscar cursos, páginas, ayuda",
+  "searchResultsLabel": "Resultados de búsqueda",
+  "recentCoursesLabel": "Cursos recientes",
+  "open": "Abrir"
+}

@@ -1,0 +1,6 @@
+{
+  "title": "Meine gespeicherten Kurse",
+  "description": "Sie haben {count} gespeicherte Kurse",
+  "noCourses": "Noch keine gespeicherten Kurse",
+  "noCoursesDescription": "Setzen Sie Lesezeichen für Kurse aus dem Katalog, um sie hier zu finden."
+}

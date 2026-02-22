@@ -1,33 +1,46 @@
 {
-  "metadata": {
-    "title": "FSC Learning Dashboard",
-    "description": "Your learning journey starts here"
-  },
-  "common": {
-    "loading": "Loading...",
-    "error": "Something went wrong",
-    "notFound": "Page not found"
-  },
-  "home": {
-    "refresh": "Refresh Page"
-  },
-  "auth": {
-    "greeting": "Welcome, {name}",
-    "logout": "Log Out"
-  },
-  "loggedOut": {
-    "title": "You have been logged out",
-    "message": "Your session has ended. Log back in to continue learning.",
-    "loginBack": "Log Back In"
-  },
-  "error": {
-    "title": "Something went wrong",
-    "message": "An unexpected error occurred. Please try again.",
-    "retry": "Try Again"
-  },
-  "notFound": {
-    "title": "Page not found",
-    "message": "The page you are looking for does not exist.",
-    "goHome": "Go to Dashboard"
-  }
+  "loading": "Loading...",
+  "error": "Something went wrong",
+  "cancel": "Cancel",
+  "confirm": "Confirm",
+  "delete": "Delete",
+  "save": "Save",
+  "viewAll": "View all",
+  "noResults": "No results found",
+  "close": "Close",
+  "back": "Back",
+  "next": "Next",
+  "yes": "Yes",
+  "no": "No",
+  "courses": "Courses",
+  "clearSearch": "Clear search",
+  "clearFilters": "Clear filters",
+  "remove": "Remove",
+  "search": "Search",
+  "openMenu": "Open navigation menu",
+  "collapseSidebar": "Collapse sidebar",
+  "expandSidebar": "Expand sidebar",
+  "switchToLight": "Switch to light mode",
+  "switchToDark": "Switch to dark mode",
+  "toggleTheme": "Toggle dark mode",
+  "selectLanguage": "Select language",
+  "privacy": "Privacy",
+  "terms": "Terms",
+  "helpLabel": "Help",
+  "copyright": "© 2026 Forest Stewardship Council",
+  "notFoundTitle": "Page not found",
+  "notFoundMessage": "The page you are looking for does not exist.",
+  "goHome": "Go to Dashboard",
+  "errorTitle": "Something went wrong",
+  "errorMessage": "An unexpected error occurred.",
+  "retry": "Try again",
+  "loggedOutTitle": "You've been signed out",
+  "loggedOutMessage": "Your session has ended. Log back in to continue learning.",
+  "loginBack": "Log back in",
+  "siteTitle": "FSC Learning",
+  "pageTitleDashboard": "Dashboard",
+  "pageTitleCatalogue": "Catalogue",
+  "pageTitleLoggedOut": "Signed Out",
+  "pageTitleNotFound": "Page Not Found",
+  "pageTitleError": "Error"
 }
