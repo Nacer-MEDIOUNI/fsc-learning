@@ -16,5 +16,5 @@ export const Small: Story = { args: { initials: 'SM', size: 'sm' } };
 export const Medium: Story = { args: { initials: 'SM', size: 'md' } };
 export const Large: Story = { args: { initials: 'SM', size: 'lg' } };
 export const WithImage: Story = {
-  args: { initials: 'SM', imageUrl: '/images/course1.jfif', size: 'lg' },
+  args: { initials: 'SM', imageUrl: '/images/course1.jpg', size: 'lg' },
 };

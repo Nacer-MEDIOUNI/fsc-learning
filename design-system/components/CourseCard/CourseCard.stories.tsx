@@ -9,7 +9,7 @@ const mockCourse: Course = {
   category: 'Certification',
   module: 'Module 3: Documentation',
   icon: 'Award',
-  thumbnailUrl: '/images/course1.jfif',
+  thumbnailUrl: '/images/course1.jpg',
   progress: 65,
   status: 'in_progress',
   duration: '4h 30m',
@@ -28,13 +28,6 @@ const completedCourse: Course = {
 const meta = {
   title: 'Compound/CourseCard',
   component: CourseCard,
-  decorators: [
-    (Story) => (
-      <div style={{ maxWidth: 360 }}>
-        <Story />
-      </div>
-    ),
-  ],
   argTypes: {
     variant: {
       control: 'select',
@@ -57,6 +50,13 @@ type Story = StoryObj<typeof meta>;
 
 export const Discovery: Story = {
   args: { course: mockCourse, variant: 'discovery' },
+  decorators: [
+    (Story) => (
+      <div style={{ maxWidth: 360 }}>
+        <Story />
+      </div>
+    ),
+  ],
 };
 
 export const Progress: Story = {
@@ -73,6 +73,13 @@ export const Progress: Story = {
 
 export const Saved: Story = {
   args: { course: mockCourse, variant: 'saved' },
+  decorators: [
+    (Story) => (
+      <div style={{ maxWidth: 360 }}>
+        <Story />
+      </div>
+    ),
+  ],
 };
 
 export const Hero: Story = {
